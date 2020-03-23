@@ -832,7 +832,8 @@ if s:configuration.enable_italic
   " call s:HL('Conditional', s:palette.red, s:palette.none, 'italic')
   call s:HL('Conditional', s:palette.purple, s:palette.none)
   call s:HL('Repeat', s:palette.red, s:palette.none, 'italic')
-  call s:HL('Keyword', s:palette.red, s:palette.none, 'italic')
+  " call s:HL('Keyword', s:palette.red, s:palette.none, 'italic')
+  call s:HL('Keyword', s:palette.orange, s:palette.none, 'italic')
   call s:HL('Typedef', s:palette.red, s:palette.none, 'italic')
   call s:HL('Exception', s:palette.red, s:palette.none, 'italic')
   call s:HL('Statement', s:palette.red, s:palette.none, 'italic')
@@ -844,7 +845,8 @@ else
   " call s:HL('Conditional', s:palette.red, s:palette.none)
   call s:HL('Conditional', s:palette.purple, s:palette.none)
   call s:HL('Repeat', s:palette.red, s:palette.none)
-  call s:HL('Keyword', s:palette.red, s:palette.none)
+  " call s:HL('Keyword', s:palette.red, s:palette.none)
+  call s:HL('Keyword', s:palette.orange, s:palette.none)
   call s:HL('Typedef', s:palette.red, s:palette.none)
   call s:HL('Exception', s:palette.red, s:palette.none)
   call s:HL('Statement', s:palette.red, s:palette.none)
@@ -892,20 +894,24 @@ if s:configuration.enable_italic
   call s:HL('RedItalic', s:palette.red, s:palette.none, 'italic')
   call s:HL('OrangeItalic', s:palette.orange, s:palette.none, 'italic')
   call s:HL('PurpleItalic', s:palette.purple, s:palette.none, 'italic')
+  call s:HL('YellowItalic', s:palette.yellow, s:palette.none, 'italic')
 else
   call s:HL('RedItalic', s:palette.red, s:palette.none)
   call s:HL('OrangeItalic', s:palette.orange, s:palette.none)
   call s:HL('PurpleItalic', s:palette.purple, s:palette.none)
+  call s:HL('YellowItalic', s:palette.yellow, s:palette.none) 
 endif
 call s:HL('Red', s:palette.red, s:palette.none)
 call s:HL('Orange', s:palette.orange, s:palette.none)
 call s:HL('Purple', s:palette.purple, s:palette.none)
 if s:configuration.enable_bold
+  call s:HL('Fg0Bold', s:palette.fg0, s:palette.none, 'bold')
   call s:HL('GreenBold', s:palette.green, s:palette.none, 'bold')
   call s:HL('AquaBold', s:palette.aqua, s:palette.none, 'bold')
   call s:HL('PurpleBold', s:palette.purple, s:palette.none, 'bold')
   call s:HL('OrangeBold', s:palette.orange, s:palette.none, 'bold')
 else
+  call s:HL('Fg0Bold', s:palette.fg0, s:palette.none)
   call s:HL('GreenBold', s:palette.green, s:palette.none)
   call s:HL('AquaBold', s:palette.aqua, s:palette.none)
   call s:HL('PurpleBold', s:palette.purple, s:palette.none)
@@ -1124,7 +1130,8 @@ highlight! link javaScriptOperator Orange
 highlight! link javaScriptMember Aqua
 " }}}
 " vim-javascript: https://github.com/pangloss/vim-javascript{{{
-highlight! link jsThis Purple
+" highlight! link jsThis Purple
+highlight! link jsThis OrangeItalic
 highlight! link jsUndefined Aqua
 highlight! link jsNull Aqua
 highlight! link jsNan Aqua
@@ -1134,12 +1141,15 @@ highlight! link jsFunction RedItalic
 highlight! link jsGlobalNodeObjects PurpleItalic
 highlight! link jsGlobalObjects Yellow
 highlight! link jsArrowFunction Purple
-highlight! link jsArrowFuncArgs Blue
+" highlight! link jsArrowFuncArgs Blue
+highlight! link jsArrowFuncArgs FgBold
 highlight! link jsFuncArgs Blue
-highlight! link jsObjectProp Aqua
+" highlight! link jsObjectProp Aqua
+highlight! link jsObjectProp Fg0
 highlight! link jsVariableDef Blue
 highlight! link jsObjectKey Aqua
-highlight! link jsParen Blue
+" highlight! link jsParen Blue
+highlight! link jsParen Fg0
 highlight! link jsParenIfElse Blue
 highlight! link jsParenRepeat Blue
 highlight! link jsParenSwitch Blue
@@ -1147,16 +1157,24 @@ highlight! link jsParenCatch Blue
 highlight! link jsBracket Blue
 highlight! link jsBlockLabel Aqua
 highlight! link jsFunctionKey GreenBold
-highlight! link jsClassDefinition Yellow
+" highlight! link jsClassDefinition Yellow
+highlight! link jsClassDefinition Blue
 highlight! link jsDot Grey
 highlight! link jsDestructuringBlock Blue
 highlight! link jsSpreadExpression Purple
 highlight! link jsSpreadOperator Green
-highlight! link jsModuleKeyword Yellow
+" highlight! link jsModuleKeyword Yellow
+highlight! link jsModuleKeyword Fg
 highlight! link jsObjectValue Blue
 highlight! link jsTemplateExpression Yellow
 highlight! link jsTemplateBraces Yellow
 highlight! link jsClassMethodType Orange
+
+highlight! link jsClassKeyword Orange
+highlight! link jsExtendsKeyword PurpleItalic
+highlight! link jsFuncCall Aqua
+highlight! link jsClassFuncName Aqua
+highlight! link jsReturn PurpleBold
 " }}}
 " yajs: https://github.com/othree/yajs.vim{{{
 highlight! link javascriptEndColons Fg
@@ -1301,7 +1319,7 @@ highlight! link jsxOpenPunct Grey
 highlight! link jsxClosePunct Grey
 highlight! link jsxEscapeJs Blue
 " highlight! link jsxAttrib Aqua
-highlight! link jsxAttrib Yellow
+highlight! link jsxAttrib YellowItalic
 highlight! link jsxEqual PurpleBold
 highlight! link jsxBraces Blue
 
