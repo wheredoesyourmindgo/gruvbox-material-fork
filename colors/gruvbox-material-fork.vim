@@ -829,7 +829,8 @@ if s:configuration.enable_italic
   call s:HL('PreCondit', s:palette.purple, s:palette.none, 'italic')
   call s:HL('Include', s:palette.purple, s:palette.none, 'italic')
   call s:HL('Define', s:palette.purple, s:palette.none, 'italic')
-  call s:HL('Conditional', s:palette.red, s:palette.none, 'italic')
+  " call s:HL('Conditional', s:palette.red, s:palette.none, 'italic')
+  call s:HL('Conditional', s:palette.purple, s:palette.none)
   call s:HL('Repeat', s:palette.red, s:palette.none, 'italic')
   call s:HL('Keyword', s:palette.red, s:palette.none, 'italic')
   call s:HL('Typedef', s:palette.red, s:palette.none, 'italic')
@@ -840,7 +841,8 @@ else
   call s:HL('PreCondit', s:palette.purple, s:palette.none)
   call s:HL('Include', s:palette.purple, s:palette.none)
   call s:HL('Define', s:palette.purple, s:palette.none)
-  call s:HL('Conditional', s:palette.red, s:palette.none)
+  " call s:HL('Conditional', s:palette.red, s:palette.none)
+  call s:HL('Conditional', s:palette.purple, s:palette.none)
   call s:HL('Repeat', s:palette.red, s:palette.none)
   call s:HL('Keyword', s:palette.red, s:palette.none)
   call s:HL('Typedef', s:palette.red, s:palette.none)
@@ -1352,7 +1354,8 @@ highlight! link typescriptInterfaceHeritage Yellow
 highlight! link typescriptIdentifier Purple
 highlight! link typescriptGlobal Purple
 highlight! link typescriptOperator RedItalic
-highlight! link typescriptNodeGlobal PurpleItalic
+" highlight! link typescriptNodeGlobal PurpleItalic
+highlight! link typescriptNodeGlobal Fg
 highlight! link typescriptExport PurpleItalic
 highlight! link typescriptDefaultParam Orange
 highlight! link typescriptImport PurpleItalic
@@ -1369,7 +1372,8 @@ highlight! link typescriptOptionalMark Orange
 highlight! link typescriptNull Aqua
 highlight! link typescriptMappedIn RedItalic
 highlight! link typescriptFuncTypeArrow Purple
-highlight! link typescriptTernaryOp Orange
+" highlight! link typescriptTernaryOp Orange
+highlight! link typescriptTernaryOp PurpleBold
 highlight! link typescriptParenExp Blue
 highlight! link typescriptIndexExpr Blue
 highlight! link typescriptDotNotation Grey
@@ -1466,7 +1470,8 @@ highlight! link typescriptDOMFormProp Aqua
 highlight! link typescriptBOMHistoryProp Aqua
 highlight! link typescriptMathStaticProp Aqua
 
-highlight! link typescriptBlock Aqua
+" highlight! link typescriptBlock Aqua
+highlight! link typescriptBlock Fg
 highlight! link typescriptStatementKeyword PurpleBold
 " }}}
 " }}}
