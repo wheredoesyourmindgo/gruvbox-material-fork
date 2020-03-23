@@ -903,6 +903,11 @@ else
   call s:HL('GreenBold', s:palette.green, s:palette.none)
   call s:HL('AquaBold', s:palette.aqua, s:palette.none)
 endif
+if s:configuration.enable_bold && s:configuration.enable_italic
+  call s:HL('PurpleBoldItalic', s:palette.purple, s:palette.none, 'bold' . 'italic')
+else
+  call s:HL('PurpleBoldItalic', s:palette.purple, s:palette.none)
+endif
 call s:HL('Green', s:palette.green, s:palette.none)
 call s:HL('Aqua', s:palette.aqua, s:palette.none)
 if s:configuration.transparent_background
@@ -1281,10 +1286,16 @@ highlight! link javascriptMathStaticProp Aqua
 " JavaScript React: {{{
 " vim-jsx-pretty: https://github.com/maxmellon/vim-jsx-pretty{{{
 highlight! link jsxTagName OrangeItalic
-highlight! link jsxOpenPunct Green
-highlight! link jsxClosePunct Blue
+" highlight! link jsxOpenPunct Green
+highlight! link jsxOpenPunct Grey
+" highlight! link jsxClosePunct Blue
+highlight! link jsxClosePunct Grey
 highlight! link jsxEscapeJs Blue
-highlight! link jsxAttrib Aqua
+" highlight! link jsxAttrib Aqua
+highlight! link jsxAttrib Yellow
+highlight! link jsxEqual PurpleBoldItalic
+
+highlight! link jsxComponentName Blue
 " }}}
 " }}}
 " TypeScript: {{{
@@ -1300,8 +1311,10 @@ highlight! link typescriptParens Fg
 " yats: https:github.com/HerringtonDarkholme/yats.vim{{{
 highlight! link typescriptMethodAccessor OrangeItalic
 highlight! link typescriptVariable Orange
-highlight! link typescriptVariableDeclaration Blue
-highlight! link typescriptTypeReference Yellow
+" highlight! link typescriptVariableDeclaration Blue
+highlight! link typescriptVariableDeclaration Yellow
+" highlight! link typescriptTypeReference Yellow
+highlight! link typescriptTypeReference Fg
 highlight! link typescriptBraces Fg
 highlight! link typescriptEnumKeyword RedItalic
 highlight! link typescriptEnum Yellow
@@ -1338,7 +1351,8 @@ highlight! link typescriptAmbientDeclaration RedItalic
 highlight! link typescriptTemplateSubstitution Yellow
 highlight! link typescriptTemplateSB Yellow
 highlight! link typescriptExceptions RedItalic
-highlight! link typescriptCastKeyword RedItalic
+"highlight! link typescriptCastKeyword RedItalic
+highlight! link typescriptCastKeyword PurpleItalic
 highlight! link typescriptOptionalMark Orange
 highlight! link typescriptNull Aqua
 highlight! link typescriptMappedIn RedItalic
