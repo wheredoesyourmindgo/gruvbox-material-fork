@@ -902,10 +902,12 @@ if s:configuration.enable_bold
   call s:HL('GreenBold', s:palette.green, s:palette.none, 'bold')
   call s:HL('AquaBold', s:palette.aqua, s:palette.none, 'bold')
   call s:HL('PurpleBold', s:palette.purple, s:palette.none, 'bold')
+  call s:HL('OrangeBold', s:palette.orange, s:palette.none, 'bold')
 else
   call s:HL('GreenBold', s:palette.green, s:palette.none)
   call s:HL('AquaBold', s:palette.aqua, s:palette.none)
   call s:HL('PurpleBold', s:palette.purple, s:palette.none)
+  call s:HL('OrangeBold', s:palette.orange, s:palette.none)
 endif
 if s:configuration.enable_bold && s:configuration.enable_italic
   call s:HL('PurpleBoldItalic', s:palette.purple, s:palette.none, 'bold' . 'italic')
@@ -1289,7 +1291,8 @@ highlight! link javascriptMathStaticProp Aqua
 " }}}
 " JavaScript React: {{{
 " vim-jsx-pretty: https://github.com/maxmellon/vim-jsx-pretty{{{
-highlight! link jsxTagName OrangeItalic
+" highlight! link jsxTagName OrangeItalic
+highlight! link jsxTagName Orange
 " highlight! link jsxOpenPunct Green
 highlight! link jsxOpenPunct Grey
 " highlight! link jsxClosePunct Blue
@@ -1298,6 +1301,7 @@ highlight! link jsxEscapeJs Blue
 " highlight! link jsxAttrib Aqua
 highlight! link jsxAttrib Yellow
 highlight! link jsxEqual PurpleBold
+highlight! link jsxBraces Blue
 
 highlight! link jsxComponentName Blue
 " }}}
@@ -1330,7 +1334,8 @@ highlight! link typescriptEndColons Fg
 highlight! link typescriptMember Aqua
 highlight! link typescriptMemberOptionality Orange
 highlight! link typescriptObjectLabel Aqua
-highlight! link typescriptArrowFunc Purple
+" highlight! link typescriptArrowFunc Purple
+highlight! link typescriptArrowFunc OrangeBold
 highlight! link typescriptAbstract Orange
 highlight! link typescriptObjectColon Grey
 highlight! link typescriptTypeAnnotation Grey
@@ -1460,6 +1465,9 @@ highlight! link typescriptCryptoProp Aqua
 highlight! link typescriptDOMFormProp Aqua
 highlight! link typescriptBOMHistoryProp Aqua
 highlight! link typescriptMathStaticProp Aqua
+
+highlight! link typescriptBlock Aqua
+highlight! link typescriptStatementKeyword PurpleBold
 " }}}
 " }}}
 " Dart: {{{
