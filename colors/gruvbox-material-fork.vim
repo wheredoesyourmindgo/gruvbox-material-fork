@@ -856,7 +856,8 @@ call s:HL('StorageClass', s:palette.orange, s:palette.none)
 call s:HL('Tag', s:palette.orange, s:palette.none)
 call s:HL('Label', s:palette.orange, s:palette.none)
 call s:HL('Structure', s:palette.orange, s:palette.none)
-call s:HL('Operator', s:palette.orange, s:palette.none)
+" call s:HL('Operator', s:palette.orange, s:palette.none)
+call s:HL('Operator', s:palette.purple, s:palette.none)
 call s:HL('Title', s:palette.orange, s:palette.none, 'bold')
 call s:HL('Special', s:palette.yellow, s:palette.none)
 call s:HL('SpecialChar', s:palette.yellow, s:palette.none)
@@ -1132,22 +1133,28 @@ highlight! link javaScriptMember Aqua
 " vim-javascript: https://github.com/pangloss/vim-javascript{{{
 " highlight! link jsThis Purple
 highlight! link jsThis OrangeItalic
-highlight! link jsUndefined Aqua
-highlight! link jsNull Aqua
-highlight! link jsNan Aqua
-highlight! link jsSuper Purple
+" highlight! link jsUndefined Aqua
+highlight! link jsUndefined Red
+" highlight! link jsNull Aqua
+highlight! link jsNull Red
+" highlight! link jsNan Aqua
+highlight! link jsNan Red
+" highlight! link jsSuper Purple
+highlight! link jsSuper OrangeItalic
 highlight! link jsPrototype Purple
 highlight! link jsFunction RedItalic
 highlight! link jsGlobalNodeObjects PurpleItalic
 highlight! link jsGlobalObjects Yellow
-highlight! link jsArrowFunction Purple
+" highlight! link jsArrowFunction Purple
+highlight! link jsArrowFunction OrangeBold
 " highlight! link jsArrowFuncArgs Blue
 highlight! link jsArrowFuncArgs FgBold
 highlight! link jsFuncArgs Blue
 " highlight! link jsObjectProp Aqua
 highlight! link jsObjectProp Fg0
 highlight! link jsVariableDef Blue
-highlight! link jsObjectKey Aqua
+" highlight! link jsObjectKey Aqua
+highlight! link jsObjectKey Fg0
 " highlight! link jsParen Blue
 highlight! link jsParen Fg0
 highlight! link jsParenIfElse Blue
@@ -1175,6 +1182,8 @@ highlight! link jsExtendsKeyword PurpleItalic
 highlight! link jsFuncCall Aqua
 highlight! link jsClassFuncName Aqua
 highlight! link jsReturn PurpleBold
+highlight! link jsExportDefault Purple
+highlight! link jsOperator PurpleBold
 " }}}
 " yajs: https://github.com/othree/yajs.vim{{{
 highlight! link javascriptEndColons Fg
