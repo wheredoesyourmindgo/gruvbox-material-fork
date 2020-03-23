@@ -823,7 +823,8 @@ call s:HL('Debug', s:palette.orange, s:palette.none)
 call s:HL('Boolean', s:palette.red, s:palette.none)
 " call s:HL('Number', s:palette.purple, s:palette.none)
 call s:HL('Number', s:palette.red, s:palette.none)
-call s:HL('Float', s:palette.purple, s:palette.none)
+" call s:HL('Float', s:palette.purple, s:palette.none)
+call s:HL('Float', s:palette.red, s:palette.none)
 if s:configuration.enable_italic
   call s:HL('PreProc', s:palette.purple, s:palette.none, 'italic')
   call s:HL('PreCondit', s:palette.purple, s:palette.none, 'italic')
@@ -1148,7 +1149,7 @@ highlight! link jsGlobalObjects Yellow
 " highlight! link jsArrowFunction Purple
 highlight! link jsArrowFunction OrangeBold
 " highlight! link jsArrowFuncArgs Blue
-highlight! link jsArrowFuncArgs FgBold
+highlight! link jsArrowFuncArgs Fg0Bold
 highlight! link jsFuncArgs Blue
 " highlight! link jsObjectProp Aqua
 highlight! link jsObjectProp Fg0
