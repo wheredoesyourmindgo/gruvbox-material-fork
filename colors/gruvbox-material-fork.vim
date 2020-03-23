@@ -901,9 +901,11 @@ call s:HL('Purple', s:palette.purple, s:palette.none)
 if s:configuration.enable_bold
   call s:HL('GreenBold', s:palette.green, s:palette.none, 'bold')
   call s:HL('AquaBold', s:palette.aqua, s:palette.none, 'bold')
+  call s:HL('PurpleBold', s:palette.purple, s:palette.none, 'bold')
 else
   call s:HL('GreenBold', s:palette.green, s:palette.none)
   call s:HL('AquaBold', s:palette.aqua, s:palette.none)
+  call s:HL('PurpleBold', s:palette.purple, s:palette.none)
 endif
 if s:configuration.enable_bold && s:configuration.enable_italic
   call s:HL('PurpleBoldItalic', s:palette.purple, s:palette.none, 'bold' . 'italic')
@@ -1295,7 +1297,7 @@ highlight! link jsxClosePunct Grey
 highlight! link jsxEscapeJs Blue
 " highlight! link jsxAttrib Aqua
 highlight! link jsxAttrib Yellow
-highlight! link jsxEqual PurpleBoldItalic
+highlight! link jsxEqual PurpleBold
 
 highlight! link jsxComponentName Blue
 " }}}
@@ -1332,9 +1334,12 @@ highlight! link typescriptArrowFunc Purple
 highlight! link typescriptAbstract Orange
 highlight! link typescriptObjectColon Grey
 highlight! link typescriptTypeAnnotation Grey
-highlight! link typescriptAssign Orange
-highlight! link typescriptBinaryOp Orange
-highlight! link typescriptUnaryOp Orange
+" highlight! link typescriptAssign Orange
+highlight! link typescriptAssign PurpleBold
+" highlight! link typescriptBinaryOp Orange
+highlight! link typescriptBinaryOp PurpleBold
+" highlight! link typescriptUnaryOp Orange
+highlight! link typescriptUnaryOp PurpleBold
 highlight! link typescriptFuncComma Fg
 highlight! link typescriptClassName Yellow
 highlight! link typescriptClassHeritage Yellow
