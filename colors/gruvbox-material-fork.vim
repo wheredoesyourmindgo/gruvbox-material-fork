@@ -1345,6 +1345,8 @@ highlight! link typescriptInterpolation Yellow
 highlight! link typescriptInterpolationDelimiter Yellow
 highlight! link typescriptBraces Fg
 highlight! link typescriptParens Fg
+
+highlight! link typescriptFunction Aqua
 " }}}
 " yats: https:github.com/HerringtonDarkholme/yats.vim{{{
 highlight! link typescriptMethodAccessor OrangeItalic
