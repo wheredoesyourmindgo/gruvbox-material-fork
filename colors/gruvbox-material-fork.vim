@@ -819,8 +819,10 @@ call s:HL('QuickFixLine', s:palette.yellow, s:palette.none, 'reverse')
 call s:HL('Debug', s:palette.orange, s:palette.none)
 " }}}
 " Syntax: {{{
-call s:HL('Boolean', s:palette.purple, s:palette.none)
-call s:HL('Number', s:palette.purple, s:palette.none)
+" call s:HL('Boolean', s:palette.purple, s:palette.none)
+call s:HL('Boolean', s:palette.red, s:palette.none)
+" call s:HL('Number', s:palette.purple, s:palette.none)
+call s:HL('Number', s:palette.red, s:palette.none)
 call s:HL('Float', s:palette.purple, s:palette.none)
 if s:configuration.enable_italic
   call s:HL('PreProc', s:palette.purple, s:palette.none, 'italic')
