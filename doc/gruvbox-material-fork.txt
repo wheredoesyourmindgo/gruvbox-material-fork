@@ -15,7 +15,7 @@ Via Plugin Manager~
 
     Take [vim-plug](https://github.com/junegunn/vim-plug) for example:
 >
-	Plug 'sainnhe/gruvbox-material'
+	Plug 'wheredoesyourmindgo/gruvbox-material-fork'
 <
     For better syntax highlighting support, please install
     [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot).
@@ -23,28 +23,13 @@ Via Plugin Manager~
 ------------------------------------------------------------------------------
 Manually~
 
-    1. Clone the repository: `git clone --depth 1 https://github.com/sainnhe/gruvbox-material.git`
+    1. Clone the repository: `git clone --depth 1 https://github.com/wheredoesyourmindgo/gruvbox-material-fork.git`
 
-    2. Copy `/path/to/gruvbox-material/colors/gruvbox-material.vim` to
+    2. Copy `/path/to/gruvbox-material-fork/colors/gruvbox-material-fork.vim` to
     `~/.vim/colors/` .
 
-    3. Copy `/path/to/gruvbox-material/doc/gruvbox-material.txt` to
+    3. Copy `/path/to/gruvbox-material-fork/doc/gruvbox-material-fork.txt` to
     `~/.vim/doc/` and execute `:helptags ~/.vim/doc/` to generate help tags.
-
-    4. To install [airline](https://github.com/vim-airline/vim-airline) theme,
-    copy `/path/to/gruvbox-material/autoload/airline/themes/gruvbox_material.vim`
-    to `~/.vim/autoload/airline/themes/gruvbox_material.vim` .
-
-    5. To install [lightline](https://github.com/itchyny/lightline.vim) theme,
-    copy `/path/to/gruvbox-material/autoload/lightline/colorscheme/gruvbox_material.vim` 
-    to `~/.vim/autoload/lightline/colorscheme/gruvbox_material.vim` .
-
-------------------------------------------------------------------------------
-AUR~
-
-    There is a package available for Arch Linux users in AUR:
-
-    https://aur.archlinux.org/packages/gruvbox-material-git
 
 ==============================================================================
 USAGE                                                  *gruvbox-material-usage*
@@ -64,49 +49,20 @@ Vim~
 	set background=light
 
 	" set contrast
-	" this configuration option should be placed before `colorscheme gruvbox-material`
+	" this configuration option should be placed before `colorscheme gruvbox-material-fork`
 	" available values: 'hard', 'medium'(default), 'soft'
 	let g:gruvbox_material_background = 'soft'
 
-	colorscheme gruvbox-material
+	colorscheme gruvbox-material-fork
 <
     See |gruvbox-material-configuration| for more configuration options.
 
     If you want to apply this color scheme temporarily, run this command in
     vim(this may cause broken colors):
 >
-	:colorscheme gruvbox-material
+	:colorscheme gruvbox-material-fork
 <
-------------------------------------------------------------------------------
-Airline~
 
-    To enable [airline](https://github.com/vim-airline/vim-airline) color
-    scheme, put this in your vimrc:
->
-	let g:airline_theme = 'gruvbox_material'
-<
-    To apply it without reloading:
->
-	:AirlineTheme gruvbox_material
-<
-------------------------------------------------------------------------------
-Lightline~
-
-    To enable [lightline](https://github.com/itchyny/lightline.vim) color
-    scheme, put this in your vimrc:
->
-	let g:lightline = {}
-	let g:lightline.colorscheme = 'gruvbox_material'
-    
-	" or this line
-	let g:lightline = {'colorscheme' : 'gruvbox_material'}
-<
-    To apply it without reloading:
->
-	:let g:lightline.colorscheme = 'gruvbox_material'
-	:call lightline#init()
-	:call lightline#colorscheme()
-<
 ==============================================================================
 CONFIGURATION                                  *gruvbox-material-configuration*
 
@@ -406,14 +362,6 @@ A:~
     scheme enabled is very likely to cause colors to break. If any color is
     broken, you can enable the color scheme in your vimrc instead of after
     vim startup.
-
-------------------------------------------------------------------------------
-Q:~
-    I can't apply airline/lightline color scheme.
-
-A:~
-    The name is `gruvbox_material` instead of `gruvbox-material`. I have to
-    use underline for some grammatical reasons.
 
 ------------------------------------------------------------------------------
 Q:~

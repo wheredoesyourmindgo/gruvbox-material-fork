@@ -1,6 +1,6 @@
 ## Introduction
 
-Gruvbox Material is a modified version of [Gruvbox](https://github.com/morhetz/gruvbox), the contrast is adjusted to be softer in order to protect developers' eyes.
+Gruvbox Material Fork is a modified version of [Gruvbox Material](https://github.com/sainnhe/gruvbox-material), the contrast is adjusted to be softer in order to protect developers' eyes.
 
 There are 3 palettes available in this color scheme:
 
@@ -54,7 +54,7 @@ This color scheme uses the `material` palette by default, you can use a global v
 Take [vim-plug](https://github.com/junegunn/vim-plug) for example:
 
 ```vim
-Plug 'sainnhe/gruvbox-material'
+Plug 'wheredoesyourmindgo/gruvbox-material-fork'
 ```
 
 For better syntax highlighting support, please install [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot).
@@ -64,8 +64,6 @@ For better syntax highlighting support, please install [sheerun/vim-polyglot](ht
 1. Clone this repository.
 2. Copy `/path/to/gruvbox-material/colors/gruvbox-material.vim` to `~/.vim/colors/` .
 3. Copy `/path/to/gruvbox-material/doc/gruvbox-material.txt` to `~/.vim/doc/` and execute `:helptags ~/.vim/doc/` to generate help tags.
-4. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/gruvbox-material/autoload/airline/themes/gruvbox_material.vim` to `~/.vim/autoload/airline/themes/gruvbox_material.vim` .
-5. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/gruvbox-material/autoload/lightline/colorscheme/gruvbox_material.vim` to `~/.vim/autoload/lightline/colorscheme/gruvbox_material.vim` .
 
 ### AUR
 
@@ -88,11 +86,11 @@ set background=dark
 set background=light
 
 " set contrast
-" this configuration option should be placed before `colorscheme gruvbox-material`
+" this configuration option should be placed before `colorscheme gruvbox-material-fork`
 " available values: 'hard', 'medium'(default), 'soft'
 let g:gruvbox_material_background = 'soft'
 
-colorscheme gruvbox-material
+colorscheme gruvbox-material-fork
 ```
 
 See `:help gruvbox-material-configuration` for more configuration options.
@@ -100,41 +98,7 @@ See `:help gruvbox-material-configuration` for more configuration options.
 If you want to apply this color scheme temporarily, run this command in vim(**this may cause broken colors**):
 
 ```vim
-:colorscheme gruvbox-material
-```
-
-### Airline
-
-To enable [airline](https://github.com/vim-airline/vim-airline) color scheme, put this in your vimrc:
-
-```vim
-let g:airline_theme = 'gruvbox_material'
-```
-
-To apply it without reloading:
-
-```vim
-:AirlineTheme gruvbox_material
-```
-
-### Lightline
-
-To enable [lightline](https://github.com/itchyny/lightline.vim) color scheme, put this in your vimrc:
-
-```vim
-let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox_material'
-
-" or this line
-let g:lightline = {'colorscheme' : 'gruvbox_material'}
-```
-
-To apply it without reloading:
-
-```vim
-:let g:lightline.colorscheme = 'gruvbox_material'
-:call lightline#init()
-:call lightline#colorscheme()
+:colorscheme gruvbox-material-fork
 ```
 
 ## FAQ
@@ -147,10 +111,6 @@ To apply it without reloading:
 2. Maybe your terminal emulator doesn't support true colors, you can test it using [this script](https://unix.stackexchange.com/questions/404414/print-true-color-24-bit-test-pattern).
 3. If you are running vim in tmux, you need to override default true colors of tmux, as tmux cannot display true colors properly: [#1246 How to use true colors in vim under tmux?](https://github.com/tmux/tmux/issues/1246)
 4. There are many highlight group links in syntax files while a color scheme may change them, enabling one color scheme based on another color scheme enabled is very likely to cause colors to break. If any color is broken, you can enable the color scheme in your vimrc instead of after vim startup.
-
-**Q: I can't apply airline/lightline color scheme.**
-
-**A:** The name is `gruvbox_material` instead of `gruvbox-material`. I have to use underline for some grammatical reasons.
 
 **Q: How to enable cursive italic keywords?**
 

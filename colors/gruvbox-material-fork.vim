@@ -1,8 +1,9 @@
 " -----------------------------------------------------------------------------
-" Name:         Gruvbox Material
-" Description:  Gruvbox with Material Palette
-" Author:       sainnhe <sainnhe@gmail.com>
-" Website:      https://github.com/sainnhe/gruvbox-material
+" Name:         Gruvbox Material Fork
+" Description:  Fork of Gruvbox with Material Palette
+" Original Author:       sainnhe <sainnhe@gmail.com>
+" Modified By:       wheredoesyourmindgo <moemanchu@icloud.com>
+" Website:      https://github.com/wheredoesyourmindgo/gruvbox-material-fork
 " License:      MIT
 " -----------------------------------------------------------------------------
 
@@ -15,7 +16,7 @@ endif
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 let s:tmux = executable('tmux') && $TMUX !=# ''
 
-let g:colors_name = 'gruvbox-material'
+let g:colors_name = 'gruvbox-material-fork'
 " }}}
 " Configuration: {{{
 let s:configuration = {}
