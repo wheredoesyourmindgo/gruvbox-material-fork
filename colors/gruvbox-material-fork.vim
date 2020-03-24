@@ -1503,6 +1503,14 @@ highlight! link typescriptMathStaticProp Fg
 highlight! link typescriptBlock Fg
 highlight! link typescriptStatementKeyword PurpleBold
 " }}}
+
+" vim-jsx-typescript: https://github.com/peitalin/vim-jsx-typescript{{{
+highlight! link tsxTagName Blue
+highlight! link tsxCloseTagName Blue
+highlight! link tsxAttributeBraces Blue
+highlight! link tsxAttrib YellowItalic
+" }}}
+
 " }}}
 " Dart: {{{
 " dart-lang: https://github.com/dart-lang/dart-vim-plugin{{{
